@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <style>
+       
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+        
+           
+        }
+
+        .App {
+            text-align: center;
+            width: 800px;
+            background: #fffefe;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 8px;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .search-button {
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+        }
+
+        .weather-details {
+            margin-top: 20px;
+        }
+
+        #loadingMessage {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -65,7 +117,7 @@
                 <p><strong>Condition:</strong> ${weather.current.condition.text}</p>
                 <p><strong>Humidity:</strong> ${weather.current.humidity}%</p>
                 <p><strong>Wind Speed:</strong> ${weather.current.wind_kph} km/h</p>
-            `;
+            `; 
         };
 
         searchForm.addEventListener('submit', (e) => { 
